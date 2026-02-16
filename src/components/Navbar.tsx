@@ -1,4 +1,4 @@
-import { Leaf } from "lucide-react";
+import React from "react";
 
 const Navbar = () => {
   return (
@@ -6,8 +6,12 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-20 items-center">
           <div className="flex items-center gap-3">
-            <div className="w-12 h-12 bg-green-600 rounded-full flex items-center justify-center overflow-hidden">
-              <Leaf className="text-white h-7 w-7" />
+            <div className="w-12 h-12 flex items-center justify-center overflow-hidden">
+              <img 
+                src="/logo_green_drop.png" 
+                alt="Green Drop Logo" 
+                className="w-full h-full object-contain"
+              />
             </div>
             <div className="flex flex-col">
               <span className="text-xl font-black text-green-900 leading-none tracking-tight">GREEN DROP</span>
