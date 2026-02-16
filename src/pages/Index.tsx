@@ -6,7 +6,10 @@ import GrowthTimeline from "@/components/GrowthTimeline";
 import AssemblySteps from "@/components/AssemblySteps";
 import BestPlants from "@/components/BestPlants";
 import KitDetails from "@/components/KitDetails";
+import TechnicalSpecs from "@/components/TechnicalSpecs";
 import MaintenanceTips from "@/components/MaintenanceTips";
+import FAQ from "@/components/FAQ";
+import ContactForm from "@/components/ContactForm";
 import Footer from "@/components/Footer";
 import { MadeWithDyad } from "@/components/made-with-dyad";
 
@@ -22,7 +25,10 @@ const Index = () => {
         <AssemblySteps />
         <BestPlants />
         <KitDetails />
+        <TechnicalSpecs />
         <MaintenanceTips />
+        <FAQ />
+        <ContactForm />
       </main>
       <Footer />
       <MadeWithDyad />
