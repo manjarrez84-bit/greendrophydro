@@ -1,8 +1,10 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
+import Benefits from "@/components/Benefits";
 import Comparison from "@/components/Comparison";
 import GrowthTimeline from "@/components/GrowthTimeline";
 import AssemblySteps from "@/components/AssemblySteps";
+import BestPlants from "@/components/BestPlants";
 import KitDetails from "@/components/KitDetails";
 import MaintenanceTips from "@/components/MaintenanceTips";
 import Footer from "@/components/Footer";
@@ -14,9 +16,11 @@ const Index = () => {
       <Navbar />
       <main>
         <Hero />
+        <Benefits />
         <Comparison />
         <GrowthTimeline />
         <AssemblySteps />
+        <BestPlants />
         <KitDetails />
         <MaintenanceTips />
       </main>
