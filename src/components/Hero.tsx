@@ -12,7 +12,7 @@ const Hero = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="text-center lg:text-left">
             <div className="inline-flex items-center gap-2 py-1 px-3 rounded-full bg-yellow-100 text-yellow-700 text-sm font-bold mb-6 animate-bounce">
-              <Tag size={16} /> LANZAMIENTO: 20% OFF EN TU PRIMER KIT
+              <Tag size={16} /> OFERTA LIMITADA: $1,100 MXN (ANTES $1,300)
             </div>
             <h1 className="text-5xl lg:text-7xl font-extrabold text-gray-900 leading-tight mb-6">
               DE TU HUERTO <br />
@@ -37,8 +37,8 @@ const Hero = () => {
           <div className="relative">
             <div className="bg-gradient-to-br from-green-100 to-white p-4 rounded-[2.5rem] shadow-2xl">
               <img 
-                src="https://images.unsplash.com/photo-1592419044706-39796d40f98c?auto=format&fit=crop&q=80&w=800" 
-                alt="Green Drop Lifestyle" 
+                src="/hero-promo.png" 
+                alt="Green Drop Promo Kit" 
                 className="rounded-[2rem] w-full object-cover shadow-lg"
               />
             </div>

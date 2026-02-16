@@ -35,9 +35,9 @@ const KitDetails = () => {
             </div>
             <div className="relative h-64 lg:h-auto bg-green-800">
               <img 
-                src="https://images.unsplash.com/photo-1585336139118-132f7f215b2e?auto=format&fit=crop&q=80&w=800" 
-                alt="Componentes del Kit" 
-                className="absolute inset-0 w-full h-full object-cover opacity-60"
+                src="/kit-closeup.png" 
+                alt="Detalle del Kit Green Drop" 
+                className="absolute inset-0 w-full h-full object-cover opacity-80"
               />
             </div>
           </div>
