@@ -25,9 +25,13 @@ const Hero = () => {
               <button className="bg-green-600 text-white px-8 py-4 rounded-xl text-lg font-bold hover:bg-green-700 transition-all flex items-center justify-center gap-2 shadow-xl shadow-green-200">
                 Comprar Ahora <ArrowRight size={20} />
               </button>
-              <button className="bg-white text-green-700 border-2 border-green-100 px-8 py-4 rounded-xl text-lg font-bold hover:bg-green-50 transition-all">
+              <a 
+                href="/Kit_de_Marketing_Completo_Green_Drop_Hydroponics.pdf" 
+                target="_blank"
+                className="bg-white text-green-700 border-2 border-green-100 px-8 py-4 rounded-xl text-lg font-bold hover:bg-green-50 transition-all text-center"
+              >
                 Ver Manual PDF
-              </button>
+              </a>
             </div>
           </div>
           <div className="relative">
