@@ -1,6 +1,10 @@
 import { ArrowRight, Tag } from "lucide-react";
 
 const Hero = () => {
+  const scrollToContact = () => {
+    document.getElementById('contacto')?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <section id="inicio" className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full -z-10 opacity-10">
@@ -22,7 +26,10 @@ const Hero = () => {
               Frescura garantizada. Cultiva tus propios alimentos de forma limpia y rápida con nuestro sistema de Hidroponía DWC.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <button className="bg-green-600 text-white px-8 py-4 rounded-xl text-lg font-bold hover:bg-green-700 transition-all flex items-center justify-center gap-2 shadow-xl shadow-green-200">
+              <button 
+                onClick={scrollToContact}
+                className="bg-green-600 text-white px-8 py-4 rounded-xl text-lg font-bold hover:bg-green-700 transition-all flex items-center justify-center gap-2 shadow-xl shadow-green-200"
+              >
                 Comprar Ahora <ArrowRight size={20} />
               </button>
               <a 
