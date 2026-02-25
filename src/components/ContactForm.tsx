@@ -1,6 +1,22 @@
-import { MessageSquare, Send } from "lucide-react";
+import React, { useState } from "react";
+import { MessageSquare, Send, Loader2 } from "lucide-react";
+import { showSuccess, showError } from "@/utils/toast";
 
 const ContactForm = () => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    
+    // Simular envío
+    await new Promise(resolve => setTimeout(resolve, 1500));
+    
+    showSuccess("¡Mensaje enviado! Nos pondremos en contacto contigo pronto.");
+    setIsSubmitting(false);
+    (e.target as HTMLFormElement).reset();
+  };
+
   return (
     <section id="contacto" className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -27,21 +43,28 @@ const ContactForm = () => {
             </div>
             
             <div className="bg-white p-8 rounded-3xl shadow-2xl">
-              <form className="space-y-4">
+              <form onSubmit={handleSubmit} className="space-y-4">
                 <div>
                   <label className="block text-sm font-bold text-gray-700 mb-1 uppercase tracking-wider">Nombre</label>
-                  <input type="text" className="w-full px-4 py-3 rounded-xl bg-gray-50 border-transparent focus:bg-white focus:ring-2 focus:ring-green-500 transition-all outline-none" placeholder="Tu nombre" />
+                  <input required type="text" className="w-full px-4 py-3 rounded-xl bg-gray-50 border-transparent focus:bg-white focus:ring-2 focus:ring-green-500 transition-all outline-none" placeholder="Tu nombre" />
                 </div>
                 <div>
                   <label className="block text-sm font-bold text-gray-700 mb-1 uppercase tracking-wider">WhatsApp / Teléfono</label>
-                  <input type="text" className="w-full px-4 py-3 rounded-xl bg-gray-50 border-transparent focus:bg-white focus:ring-2 focus:ring-green-500 transition-all outline-none" placeholder="81..." />
+                  <input required type="text" className="w-full px-4 py-3 rounded-xl bg-gray-50 border-transparent focus:bg-white focus:ring-2 focus:ring-green-500 transition-all outline-none" placeholder="81..." />
                 </div>
                 <div>
                   <label className="block text-sm font-bold text-gray-700 mb-1 uppercase tracking-wider">Mensaje</label>
-                  <textarea className="w-full px-4 py-3 rounded-xl bg-gray-50 border-transparent focus:bg-white focus:ring-2 focus:ring-green-500 transition-all outline-none h-32" placeholder="Me interesa el kit con 20% de descuento..."></textarea>
+                  <textarea required className="w-full px-4 py-3 rounded-xl bg-gray-50 border-transparent focus:bg-white focus:ring-2 focus:ring-green-500 transition-all outline-none h-32" placeholder="Me interesa el kit con 20% de descuento..."></textarea>
                 </div>
-                <button className="w-full bg-green-600 text-white py-4 rounded-xl font-black uppercase tracking-widest hover:bg-green-700 transition-all flex items-center justify-center gap-2 shadow-xl shadow-green-100">
-                  Enviar Pedido <Send size={18} />
+                <button 
+                  disabled={isSubmitting}
+                  className="w-full bg-green-600 text-white py-4 rounded-xl font-black uppercase tracking-widest hover:bg-green-700 transition-all flex items-center justify-center gap-2 shadow-xl shadow-green-100 disabled:opacity-70 disabled:cursor-not-allowed"
+                >
+                  {isSubmitting ? (
+                    <>Enviando... <Loader2 className="animate-spin" size={18} /></>
+                  ) : (
+                    <>Enviar Pedido <Send size={18} /></>
+                  )}
                 </button>
               </form>
             </div>
