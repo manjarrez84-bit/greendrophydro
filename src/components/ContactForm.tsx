@@ -37,7 +37,7 @@ const ContactForm = () => {
                   <div className="w-10 h-10 rounded-full bg-green-800 flex items-center justify-center">
                     <MessageSquare size={20} />
                   </div>
-                  <span className="font-bold">WhatsApp: +52 81 1234 5678</span>
+                  <span className="font-bold">WhatsApp: +52 81 3241 0626</span>
                 </div>
               </div>
             </div>

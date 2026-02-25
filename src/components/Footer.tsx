@@ -27,7 +27,7 @@ const Footer = () => {
           <div>
             <h4 className="text-white font-bold mb-6">Soporte</h4>
             <ul className="space-y-4">
-              <li className="flex items-center gap-2"><Phone size={16} /> +52 81 1234 5678</li>
+              <li className="flex items-center gap-2"><Phone size={16} /> +52 81 3241 0626</li>
               <li className="flex items-center gap-2"><Mail size={16} /> soporte@greendrop.com</li>
               <li><a href="#" className="hover:text-white transition-colors">Manuales PDF</a></li>
               <li><a href="#" className="hover:text-white transition-colors">Video Tutoriales</a></li>
