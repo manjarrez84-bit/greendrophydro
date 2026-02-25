@@ -7,7 +7,6 @@ import AssemblySteps from "@/components/AssemblySteps";
 import BestPlants from "@/components/BestPlants";
 import KitDetails from "@/components/KitDetails";
 import TechnicalSpecs from "@/components/TechnicalSpecs";
-import NutrientCalculator from "@/components/NutrientCalculator";
 import MaintenanceTips from "@/components/MaintenanceTips";
 import Testimonials from "@/components/Testimonials";
 import FAQ from "@/components/FAQ";
@@ -29,7 +28,6 @@ const Index = () => {
         <BestPlants />
         <KitDetails />
         <TechnicalSpecs />
-        <NutrientCalculator />
         <MaintenanceTips />
         <Testimonials />
         <FAQ />
