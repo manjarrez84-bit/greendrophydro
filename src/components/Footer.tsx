@@ -1,5 +1,6 @@
 import React from "react";
 import { Instagram, Facebook, Mail, Phone } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -29,7 +30,7 @@ const Footer = () => {
             <ul className="space-y-4">
               <li className="flex items-center gap-2"><Phone size={16} /> +52 81 3241 0626</li>
               <li className="flex items-center gap-2"><Mail size={16} /> soporte@greendrop.com</li>
-              <li><a href="#" className="hover:text-white transition-colors">Manuales PDF</a></li>
+              <li><a href="/Kit_de_Marketing_Completo_Green_Drop_Hydroponics.pdf" target="_blank" className="hover:text-white transition-colors">Manuales PDF</a></li>
               <li><a href="#" className="hover:text-white transition-colors">Video Tutoriales</a></li>
             </ul>
           </div>
@@ -37,7 +38,7 @@ const Footer = () => {
           <div>
             <h4 className="text-white font-bold mb-6">Empresa</h4>
             <ul className="space-y-4">
-              <li><a href="#" className="hover:text-white transition-colors">Sobre Nosotros</a></li>
+              <li><Link to="/sobre-nosotros" className="hover:text-white transition-colors">Sobre Nosotros</Link></li>
               <li><a href="#" className="hover:text-white transition-colors">Envíos</a></li>
               <li><a href="#" className="hover:text-white transition-colors">Términos</a></li>
             </ul>
