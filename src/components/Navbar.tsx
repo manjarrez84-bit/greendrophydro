@@ -15,8 +15,11 @@ const Navbar = () => {
   const navLinks = [
     { name: "Inicio", id: "inicio" },
     { name: "Beneficios", id: "comparativa" },
+    { name: "Crecimiento", id: "velocidad-crecimiento" },
     { name: "Ensamblaje", id: "ensamblaje" },
+    { name: "El Kit", id: "el-kit" },
     { name: "Cuidados", id: "cuidados" },
+    { name: "FAQ", id: "preguntas-frecuentes" },
   ];
 
   return (
