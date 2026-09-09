@@ -10,6 +10,10 @@ const components = [
 ];
 
 const KitDetails = () => {
+  const scrollToTechnicalSpecs = () => {
+    document.getElementById('ficha-tecnica')?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <section id="el-kit" className="py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -28,7 +32,10 @@ const KitDetails = () => {
                 ))}
               </div>
               <div className="mt-12">
-                <button className="bg-white text-green-900 px-8 py-4 rounded-xl font-bold hover:bg-green-50 transition-all">
+                <button 
+                  onClick={scrollToTechnicalSpecs}
+                  className="bg-white text-green-900 px-8 py-4 rounded-xl font-bold hover:bg-green-50 transition-all"
+                >
                   Ver Especificaciones Técnicas
                 </button>
               </div>
