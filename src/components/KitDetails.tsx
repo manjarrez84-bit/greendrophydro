@@ -1,4 +1,5 @@
 import { CheckCircle2 } from "lucide-react";
+import { useScrollToSection } from "@/hooks/use-scroll-to-section";
 
 const components = [
   "Reservorio + Tapa (Durable y Opaco)",
@@ -10,9 +11,7 @@ const components = [
 ];
 
 const KitDetails = () => {
-  const scrollToTechnicalSpecs = () => {
-    document.getElementById('ficha-tecnica')?.scrollIntoView({ behavior: 'smooth' });
-  };
+  const scrollToSection = useScrollToSection();
 
   return (
     <section id="el-kit" className="py-24">
@@ -33,7 +32,7 @@ const KitDetails = () => {
               </div>
               <div className="mt-12">
                 <button 
-                  onClick={scrollToTechnicalSpecs}
+                  onClick={() => scrollToSection('ficha-tecnica', '/')}
                   className="bg-white text-green-900 px-8 py-4 rounded-xl font-bold hover:bg-green-50 transition-all"
                 >
                   Ver Especificaciones Técnicas
