@@ -1,11 +1,15 @@
 import React from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { Leaf, Lightbulb, HeartHandshake, Target, Award } from "lucide-react";
+import { Leaf, Lightbulb, HeartHandshake, Target, Award, ArrowRight } from "lucide-react"; // Import ArrowRight for the CTA button
 import { MadeWithDyad } from "@/components/made-with-dyad";
-import TeamSection from "@/components/TeamSection"; // Import the new TeamSection component
+import TeamSection from "@/components/TeamSection";
 
 const AboutUs = () => {
+  const scrollToContact = () => {
+    document.getElementById('contacto')?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <div className="min-h-screen bg-white selection:bg-green-100 selection:text-green-900 scroll-smooth">
       <Navbar />
@@ -132,6 +136,24 @@ const AboutUs = () => {
 
         {/* Team Section */}
         <TeamSection />
+
+        {/* Call to Action Section */}
+        <section className="py-24 bg-green-900 text-white text-center">
+          <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-4xl font-black mb-6 uppercase tracking-tight">
+              ¡Únete a la Revolución Verde!
+            </h2>
+            <p className="text-green-100 text-lg mb-10">
+              ¿Listo para transformar tu forma de cultivar? Explora nuestros kits y comienza tu viaje hidropónico hoy mismo.
+            </p>
+            <button 
+              onClick={scrollToContact}
+              className="bg-green-600 text-white px-8 py-4 rounded-xl text-lg font-bold hover:bg-green-700 transition-all flex items-center justify-center gap-2 shadow-xl shadow-green-200 mx-auto"
+            >
+              Comprar Ahora <ArrowRight size={20} />
+            </button>
+          </div>
+        </section>
       </main>
       <Footer />
       <MadeWithDyad />
