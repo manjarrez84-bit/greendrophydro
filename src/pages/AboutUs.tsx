@@ -15,7 +15,7 @@ const AboutUs = () => {
       <Navbar />
       <main>
         {/* Hero Section */}
-        <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 bg-gradient-to-br from-green-50 to-white overflow-hidden">
+        <section id="about-us-hero" className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 bg-gradient-to-br from-green-50 to-white overflow-hidden">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h1 className="text-5xl lg:text-6xl font-extrabold text-gray-900 leading-tight mb-6">
               Nuestra Historia <br />
