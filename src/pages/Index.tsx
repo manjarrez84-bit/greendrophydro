@@ -14,7 +14,8 @@ import ContactForm from "@/components/ContactForm";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import { MadeWithDyad } from "@/components/made-with-dyad";
-import HowItWorks from "@/components/HowItWorks"; // Import the HowItWorks component
+import HowItWorks from "@/components/HowItWorks";
+import BackToTopButton from "@/components/BackToTopButton"; // Import the new component
 
 const Index = () => {
   return (
@@ -24,7 +25,7 @@ const Index = () => {
         <Hero />
         <Benefits />
         <Comparison />
-        <HowItWorks /> {/* Added HowItWorks component here */}
+        <HowItWorks />
         <GrowthTimeline />
         <AssemblySteps />
         <BestPlants />
@@ -38,6 +39,7 @@ const Index = () => {
       <Footer />
       <WhatsAppButton />
       <MadeWithDyad />
+      <BackToTopButton /> {/* Add the BackToTopButton here */}
     </div>
   );
 };

@@ -5,6 +5,7 @@ import { Leaf, Lightbulb, HeartHandshake, Target, Award, ArrowRight } from "luci
 import { MadeWithDyad } from "@/components/made-with-dyad";
 import TeamSection from "@/components/TeamSection";
 import { useScrollToSection } from "@/hooks/use-scroll-to-section";
+import BackToTopButton from "@/components/BackToTopButton"; // Import the new component
 
 const AboutUs = () => {
   const scrollToSection = useScrollToSection();
@@ -156,6 +157,7 @@ const AboutUs = () => {
       </main>
       <Footer />
       <MadeWithDyad />
+      <BackToTopButton /> {/* Add the BackToTopButton here */}
     </div>
   );
 };
