@@ -3,6 +3,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Leaf, Lightbulb, HeartHandshake, Target, Award } from "lucide-react";
 import { MadeWithDyad } from "@/components/made-with-dyad";
+import TeamSection from "@/components/TeamSection"; // Import the new TeamSection component
 
 const AboutUs = () => {
   return (
@@ -128,6 +129,9 @@ const AboutUs = () => {
             </div>
           </div>
         </section>
+
+        {/* Team Section */}
+        <TeamSection />
       </main>
       <Footer />
       <MadeWithDyad />
