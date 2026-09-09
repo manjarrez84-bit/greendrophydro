@@ -1,9 +1,8 @@
 import { ArrowRight, Tag } from "lucide-react";
+import { useScrollToSection } from "@/hooks/use-scroll-to-section";
 
 const Hero = () => {
-  const scrollToContact = () => {
-    document.getElementById('contacto')?.scrollIntoView({ behavior: 'smooth' });
-  };
+  const scrollToSection = useScrollToSection();
 
   return (
     <section id="inicio" className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
@@ -27,7 +26,7 @@ const Hero = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <button 
-                onClick={scrollToContact}
+                onClick={() => scrollToSection('contacto', '/')}
                 className="bg-green-600 text-white px-8 py-4 rounded-xl text-lg font-bold hover:bg-green-700 transition-all flex items-center justify-center gap-2 shadow-xl shadow-green-200"
               >
                 Comprar Ahora <ArrowRight size={20} />

@@ -1,14 +1,13 @@
 import React from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { Leaf, Lightbulb, HeartHandshake, Target, Award, ArrowRight } from "lucide-react"; // Import ArrowRight for the CTA button
+import { Leaf, Lightbulb, HeartHandshake, Target, Award, ArrowRight } from "lucide-react";
 import { MadeWithDyad } from "@/components/made-with-dyad";
 import TeamSection from "@/components/TeamSection";
+import { useScrollToSection } from "@/hooks/use-scroll-to-section";
 
 const AboutUs = () => {
-  const scrollToContact = () => {
-    document.getElementById('contacto')?.scrollIntoView({ behavior: 'smooth' });
-  };
+  const scrollToSection = useScrollToSection();
 
   return (
     <div className="min-h-screen bg-white selection:bg-green-100 selection:text-green-900 scroll-smooth">
@@ -147,7 +146,7 @@ const AboutUs = () => {
               ¿Listo para transformar tu forma de cultivar? Explora nuestros kits y comienza tu viaje hidropónico hoy mismo.
             </p>
             <button 
-              onClick={scrollToContact}
+              onClick={() => scrollToSection('contacto', '/')}
               className="bg-green-600 text-white px-8 py-4 rounded-xl text-lg font-bold hover:bg-green-700 transition-all flex items-center justify-center gap-2 shadow-xl shadow-green-200 mx-auto"
             >
               Comprar Ahora <ArrowRight size={20} />
